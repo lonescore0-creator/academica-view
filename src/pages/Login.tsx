@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Eye, EyeOff, GraduationCap } from "lucide-react";
 import schoolLogo from "@/assets/school-logo.png";
@@ -13,13 +14,26 @@ const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [formData, setFormData] = useState({
     email: "",
-    password: ""
+    password: "",
+    role: "student"
   });
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate login - in real app, you'd validate credentials
-    navigate("/dashboard");
+    // Simulate login - in real app, you'd validate credentials and get user role
+    switch (formData.role) {
+      case "admin":
+        navigate("/dashboard");
+        break;
+      case "teacher":
+        navigate("/teacher-dashboard");
+        break;
+      case "student":
+        navigate("/student-dashboard");
+        break;
+      default:
+        navigate("/dashboard");
+    }
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -126,6 +140,20 @@ const Login = () => {
                     )}
                   </Button>
                 </div>
+                </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="role">Login As</Label>
+                <Select value={formData.role} onValueChange={(value) => setFormData({...formData, role: value})}>
+                  <SelectTrigger className="h-12">
+                    <SelectValue placeholder="Select your role" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="student">Student</SelectItem>
+                    <SelectItem value="teacher">Teacher</SelectItem>
+                    <SelectItem value="admin">Admin</SelectItem>
+                  </SelectContent>
+                </Select>
               </div>
 
               <div className="flex items-center justify-between">

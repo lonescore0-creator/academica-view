@@ -1,31 +1,44 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Sidebar from "./Sidebar";
+import StudentSidebar from "./StudentSidebar";
+import TeacherSidebar from "./TeacherSidebar";
 import { Button } from "@/components/ui/button";
 import { Bell, Search, User } from "lucide-react";
 import { Input } from "@/components/ui/input";
 
 interface DashboardLayoutProps {
   children: React.ReactNode;
-  title: string;
+  title?: string;
   description?: string;
+  userRole?: "admin" | "student" | "teacher";
 }
 
 const DashboardLayout: React.FC<DashboardLayoutProps> = ({ 
   children, 
   title, 
-  description 
+  description,
+  userRole = "admin"
 }) => {
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
 
+  const renderSidebar = () => {
+    switch (userRole) {
+      case "student":
+        return <StudentSidebar isCollapsed={sidebarCollapsed} setIsCollapsed={setSidebarCollapsed} />;
+      case "teacher":
+        return <TeacherSidebar isCollapsed={sidebarCollapsed} setIsCollapsed={setSidebarCollapsed} />;
+      default:
+        return <Sidebar isCollapsed={sidebarCollapsed} setIsCollapsed={setSidebarCollapsed} />;
+    }
+  };
+
   return (
     <div className="flex h-screen bg-background">
-      <Sidebar 
-        isCollapsed={sidebarCollapsed} 
-        setIsCollapsed={setSidebarCollapsed} 
-      />
+      {renderSidebar()}
       
-      <div className="flex-1 flex flex-col overflow-hidden">
+      {userRole === "admin" ? (
+        <div className="flex-1 flex flex-col overflow-hidden">
         {/* Top Navigation */}
         <header className="bg-card border-b border-border px-6 py-4 shadow-soft">
           <div className="flex items-center justify-between">
@@ -79,6 +92,17 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({
           </motion.div>
         </main>
       </div>
+      ) : (
+        <main className="flex-1 overflow-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            {children}
+          </motion.div>
+        </main>
+      )}
     </div>
   );
 };
