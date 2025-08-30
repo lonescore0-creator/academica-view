@@ -94,7 +94,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isCollapsed, setIsCollapsed }) => {
             key={item.name}
             to={item.href}
             className={({ isActive }) =>
-              `sidebar-item ${isActive ? 'bg-white/20 text-white' : 'text-white/70 hover:text-white'}`
+              `sidebar-item group ${isActive ? 'bg-white/20 text-white' : 'text-white/70 hover:text-white'}`
             }
           >
             <item.icon className="h-5 w-5 flex-shrink-0" />
