@@ -68,7 +68,7 @@ const TeacherSidebar: React.FC<TeacherSidebarProps> = ({ isCollapsed, setIsColla
               />
               <GraduationCap className="w-8 h-8 text-white hidden" />
               <div>
-                <h2 className="text-white font-semibold text-lg">Eastwood Academy</h2>
+                <h2 className="text-white font-semibold text-lg">Life International School</h2>
                 <p className="text-white/60 text-xs">Teacher Portal</p>
               </div>
             </motion.div>
