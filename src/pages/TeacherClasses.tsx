@@ -29,8 +29,8 @@ const TeacherClasses = () => {
     },
     {
       id: 3,
-      name: "Advanced Mathematics - Grade 11",
-      subject: "Advanced Mathematics",
+      name: "English Language - Grade 11",
+      subject: "English Language",
       grade: "11",
       students: 22,
       schedule: "Mon, Wed - 10:30-11:30",
@@ -39,12 +39,12 @@ const TeacherClasses = () => {
     },
     {
       id: 4,
-      name: "Calculus - Grade 12",
-      subject: "Calculus",
+      name: "Liberian History - Grade 12",
+      subject: "Liberian History",
       grade: "12",
       students: 19,
       schedule: "Tue, Thu, Fri - 11:45-12:45",
-      room: "Room 203",
+      room: "Room 205",
       semester: "Spring 2024"
     }
   ];

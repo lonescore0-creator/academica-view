@@ -9,38 +9,38 @@ const StudentAssignments = () => {
   const assignments = [
     {
       id: 1,
-      title: "Calculus Problem Set 12",
+      title: "Algebra Problem Set 8",
       subject: "Mathematics",
       dueDate: "2024-01-15",
       status: "pending",
-      description: "Complete problems 1-20 from Chapter 12",
+      description: "Complete problems 1-15 from Chapter 8 - Linear Equations",
       points: 50
     },
     {
       id: 2,
-      title: "Shakespeare Essay",
-      subject: "English Literature",
+      title: "Essay on Liberian Independence",
+      subject: "Liberian History",
       dueDate: "2024-01-18",
       status: "submitted",
-      description: "Write a 1000-word essay on Hamlet's character development",
+      description: "Write a 800-word essay on the founding of Liberia and its significance",
       points: 100
     },
     {
       id: 3,
-      title: "Physics Lab Report",
+      title: "Physics Lab Report - Momentum",
       subject: "Physics",
       dueDate: "2024-01-20",
       status: "pending",
-      description: "Document findings from the pendulum experiment",
+      description: "Document findings from the momentum conservation experiment",
       points: 75
     },
     {
       id: 4,
-      title: "Chemical Reactions Quiz",
-      subject: "Chemistry",
+      title: "English Grammar Quiz",
+      subject: "English Language",
       dueDate: "2024-01-22",
       status: "graded",
-      description: "Online quiz covering organic chemistry reactions",
+      description: "Quiz covering verb tenses and sentence structure",
       points: 30,
       score: 28
     }

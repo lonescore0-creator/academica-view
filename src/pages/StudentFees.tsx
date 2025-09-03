@@ -8,9 +8,9 @@ import { Calendar, CreditCard, Download, AlertCircle } from "lucide-react";
 
 const StudentFees = () => {
   const feeStructure = {
-    totalAnnualFee: 15000,
-    paidAmount: 10000,
-    pendingAmount: 5000,
+    totalAnnualFee: 75000,
+    paidAmount: 50000,
+    pendingAmount: 25000,
     nextDueDate: "2024-02-15"
   };
 
@@ -18,7 +18,7 @@ const StudentFees = () => {
     {
       id: 1,
       description: "Tuition Fee - Semester 1",
-      amount: 7500,
+      amount: 37500,
       paidDate: "2023-08-15",
       status: "paid",
       receipt: "RCP001"
@@ -26,7 +26,7 @@ const StudentFees = () => {
     {
       id: 2,
       description: "Activity Fee",
-      amount: 1000,
+      amount: 5000,
       paidDate: "2023-09-10",
       status: "paid",
       receipt: "RCP002"
@@ -34,7 +34,7 @@ const StudentFees = () => {
     {
       id: 3,
       description: "Laboratory Fee",
-      amount: 1500,
+      amount: 7500,
       paidDate: "2023-10-05",
       status: "paid",
       receipt: "RCP003"
@@ -42,7 +42,7 @@ const StudentFees = () => {
     {
       id: 4,
       description: "Tuition Fee - Semester 2",
-      amount: 7500,
+      amount: 37500,
       dueDate: "2024-02-15",
       status: "pending"
     },
@@ -51,13 +51,13 @@ const StudentFees = () => {
   const upcomingFees = [
     {
       description: "Tuition Fee - Semester 2",
-      amount: 7500,
+      amount: 37500,
       dueDate: "2024-02-15",
       category: "Academic"
     },
     {
-      description: "Examination Fee",
-      amount: 500,
+      description: "WAEC Examination Fee",
+      amount: 2500,
       dueDate: "2024-03-01",
       category: "Academic"
     },
@@ -66,9 +66,9 @@ const StudentFees = () => {
   const paymentPercentage = (feeStructure.paidAmount / feeStructure.totalAnnualFee) * 100;
 
   const formatCurrency = (amount: number) => {
-    return new Intl.NumberFormat('en-US', {
+    return new Intl.NumberFormat('en-LR', {
       style: 'currency',
-      currency: 'USD'
+      currency: 'LRD'
     }).format(amount);
   };
 

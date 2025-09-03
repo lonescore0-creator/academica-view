@@ -9,8 +9,8 @@ const StudentAnnouncements = () => {
   const announcements = [
     {
       id: 1,
-      title: "Mid-Term Examination Schedule Released",
-      content: "The mid-term examination schedule for all grades has been published. Please check your class schedules and prepare accordingly. Exams will begin on March 15th, 2024.",
+      title: "WAEC Examination Schedule Released",
+      content: "The West African Examinations Council (WAEC) examination schedule for all senior students has been published. Please check your class schedules and prepare accordingly. Exams will begin on March 15th, 2024.",
       author: "Academic Office",
       date: "2024-01-10",
       category: "Academic",
@@ -19,19 +19,19 @@ const StudentAnnouncements = () => {
     },
     {
       id: 2,
-      title: "Annual Sports Day - March 25th",
-      content: "Join us for our Annual Sports Day! Registration is now open for various events. Don't miss this exciting opportunity to showcase your athletic abilities.",
-      author: "Sports Department",
+      title: "Independence Day Celebration - July 26th",
+      content: "Join us for our annual Independence Day celebration! Students will perform cultural dances and songs. Registration is open for various cultural presentations.",
+      author: "Cultural Affairs Department",
       date: "2024-01-08",
-      category: "Sports",
+      category: "Event",
       priority: "medium",
       icon: Trophy
     },
     {
       id: 3,
-      title: "Library Renovation - Limited Access",
-      content: "The main library will undergo renovation from January 20th to February 10th. During this period, please use the temporary library facility in Building B.",
-      author: "Library Administration",
+      title: "Computer Lab Upgrade - Limited Access",
+      content: "The main computer lab will undergo equipment upgrade from January 20th to February 10th. During this period, please use the temporary lab facility in Building C.",
+      author: "IT Administration",
       date: "2024-01-05",
       category: "Facility",
       priority: "medium",
@@ -40,7 +40,7 @@ const StudentAnnouncements = () => {
     {
       id: 4,
       title: "Parent-Teacher Conference Scheduled",
-      content: "Parent-Teacher conferences are scheduled for February 5-7, 2024. Please inform your parents to schedule appointments with your respective teachers.",
+      content: "Parent-Teacher conferences are scheduled for February 5-7, 2024. Please inform your parents to schedule appointments with your respective teachers to discuss academic progress.",
       author: "Administration",
       date: "2024-01-03",
       category: "Academic",
@@ -49,8 +49,8 @@ const StudentAnnouncements = () => {
     },
     {
       id: 5,
-      title: "Science Fair Registration Open",
-      content: "The annual Science Fair is approaching! Registration is now open for all students. Submit your project proposals by February 1st, 2024.",
+      title: "National Science Fair Registration Open",
+      content: "The annual National Science Fair is approaching! Registration is now open for all students. Submit your project proposals by February 1st, 2024. Winners will represent Liberia internationally.",
       author: "Science Department",
       date: "2024-01-01",
       category: "Academic",

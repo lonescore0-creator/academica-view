@@ -6,12 +6,12 @@ import { Progress } from "@/components/ui/progress";
 
 const StudentGrades = () => {
   const subjects = [
-    { name: "Mathematics", grade: "A", percentage: 92, teacher: "Dr. Michael Chen" },
-    { name: "English Literature", grade: "B+", percentage: 87, teacher: "Ms. Sarah Wilson" },
-    { name: "Physics", grade: "A-", percentage: 89, teacher: "Mr. David Brown" },
-    { name: "Chemistry", grade: "B", percentage: 84, teacher: "Dr. Emily Davis" },
-    { name: "Biology", grade: "A", percentage: 91, teacher: "Ms. Jennifer Miller" },
-    { name: "History", grade: "B+", percentage: 86, teacher: "Mr. Robert Johnson" },
+    { name: "Mathematics", grade: "A", percentage: 92, teacher: "Mr. Joseph Kesselly" },
+    { name: "English Language", grade: "B+", percentage: 87, teacher: "Ms. Mary Tubman" },
+    { name: "Physics", grade: "A-", percentage: 89, teacher: "Mr. Abraham Sirleaf" },
+    { name: "Chemistry", grade: "B", percentage: 84, teacher: "Dr. Elizabeth Johnson" },
+    { name: "Biology", grade: "A", percentage: 91, teacher: "Ms. Grace Weah" },
+    { name: "Liberian History", grade: "B+", percentage: 86, teacher: "Mr. Samuel Roberts" },
   ];
 
   const getGradeColor = (grade: string) => {

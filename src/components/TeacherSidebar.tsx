@@ -68,7 +68,7 @@ const TeacherSidebar: React.FC<TeacherSidebarProps> = ({ isCollapsed, setIsColla
               />
               <GraduationCap className="w-8 h-8 text-white hidden" />
               <div>
-                <h2 className="text-white font-semibold text-lg">Life International School</h2>
+                <h2 className="text-white font-semibold text-lg">Monrovia Central High School</h2>
                 <p className="text-white/60 text-xs">Teacher Portal</p>
               </div>
             </motion.div>
@@ -117,7 +117,7 @@ const TeacherSidebar: React.FC<TeacherSidebarProps> = ({ isCollapsed, setIsColla
       <div className="p-4 border-t border-white/10">
         <div className="flex items-center space-x-3 mb-4">
           <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
-            <span className="text-white text-sm font-medium">MC</span>
+            <span className="text-white text-sm font-medium">JK</span>
           </div>
           {!isCollapsed && (
             <motion.div
@@ -125,7 +125,7 @@ const TeacherSidebar: React.FC<TeacherSidebarProps> = ({ isCollapsed, setIsColla
               animate={{ opacity: 1 }}
               transition={{ delay: 0.1 }}
             >
-              <p className="text-white text-sm font-medium">Dr. Michael Chen</p>
+              <p className="text-white text-sm font-medium">Mr. Joseph Kesselly</p>
               <p className="text-white/60 text-xs">Mathematics Teacher</p>
             </motion.div>
           )}
