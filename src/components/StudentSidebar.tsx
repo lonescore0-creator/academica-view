@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { NavLink, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import PWAInstallButton from "@/components/PWAInstallButton";
 import { 
   LayoutDashboard, 
   BookOpen, 
@@ -113,6 +114,15 @@ const StudentSidebar: React.FC<StudentSidebarProps> = ({ isCollapsed, setIsColla
 
       {/* User Section */}
       <div className="p-4 border-t border-white/10">
+        {/* PWA Install Button */}
+        <div className="mb-4">
+          <PWAInstallButton 
+            variant="outline" 
+            size="sm" 
+            className="w-full text-white border-white/20 hover:bg-white/10 hover:text-white"
+          />
+        </div>
+        
         <div className="flex items-center space-x-3 mb-4">
           <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
             <span className="text-white text-sm font-medium">MK</span>
