@@ -3,6 +3,9 @@ import { motion } from "framer-motion";
 import Sidebar from "./Sidebar";
 import StudentSidebar from "./StudentSidebar";
 import TeacherSidebar from "./TeacherSidebar";
+import RegistrarSidebar from "./RegistrarSidebar";
+import DeanSidebar from "./DeanSidebar";
+import VicePrincipalSidebar from "./VicePrincipalSidebar";
 import { Button } from "@/components/ui/button";
 import { Bell, Search, User } from "lucide-react";
 import { Input } from "@/components/ui/input";
@@ -11,7 +14,7 @@ interface DashboardLayoutProps {
   children: React.ReactNode;
   title?: string;
   description?: string;
-  userRole?: "admin" | "student" | "teacher";
+  userRole?: "admin" | "student" | "teacher" | "registrar" | "dean" | "vice-principal";
 }
 
 const DashboardLayout: React.FC<DashboardLayoutProps> = ({ 
@@ -28,6 +31,12 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({
         return <StudentSidebar isCollapsed={sidebarCollapsed} setIsCollapsed={setSidebarCollapsed} />;
       case "teacher":
         return <TeacherSidebar isCollapsed={sidebarCollapsed} setIsCollapsed={setSidebarCollapsed} />;
+      case "registrar":
+        return <RegistrarSidebar isCollapsed={sidebarCollapsed} setIsCollapsed={setSidebarCollapsed} />;
+      case "dean":
+        return <DeanSidebar isCollapsed={sidebarCollapsed} setIsCollapsed={setSidebarCollapsed} />;
+      case "vice-principal":
+        return <VicePrincipalSidebar isCollapsed={sidebarCollapsed} setIsCollapsed={setSidebarCollapsed} />;
       default:
         return <Sidebar isCollapsed={sidebarCollapsed} setIsCollapsed={setSidebarCollapsed} />;
     }

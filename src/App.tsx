@@ -24,6 +24,9 @@ import TeacherSchedule from "./pages/TeacherSchedule";
 import TeacherReports from "./pages/TeacherReports";
 import TeacherProfile from "./pages/TeacherProfile";
 import TeacherSettings from "./pages/TeacherSettings";
+import RegistrarDashboard from "./pages/RegistrarDashboard";
+import DeanDashboard from "./pages/DeanDashboard";
+import VicePrincipalDashboard from "./pages/VicePrincipalDashboard";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -56,6 +59,9 @@ const App = () => (
           <Route path="/teacher-reports" element={<TeacherReports />} />
           <Route path="/teacher-profile" element={<TeacherProfile />} />
           <Route path="/teacher-settings" element={<TeacherSettings />} />
+          <Route path="/registrar-dashboard" element={<RegistrarDashboard />} />
+          <Route path="/dean-dashboard" element={<DeanDashboard />} />
+          <Route path="/vice-principal-dashboard" element={<VicePrincipalDashboard />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
