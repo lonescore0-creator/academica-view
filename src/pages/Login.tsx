@@ -31,6 +31,15 @@ const Login = () => {
       case "student":
         navigate("/student-dashboard");
         break;
+      case "registrar":
+        navigate("/registrar-dashboard");
+        break;
+      case "dean":
+        navigate("/dean-dashboard");
+        break;
+      case "vice-principal":
+        navigate("/vice-principal-dashboard");
+        break;
       default:
         navigate("/dashboard");
     }
@@ -61,7 +70,7 @@ const Login = () => {
           >
             <img 
               src={schoolLogo} 
-              alt="Eastwood Academy" 
+              alt="Monrovia Central High School" 
               className="w-12 h-12 object-contain"
               onError={(e) => {
                 // Fallback if image doesn't load
@@ -77,7 +86,7 @@ const Login = () => {
             transition={{ delay: 0.3 }}
             className="text-3xl font-bold text-white mb-2"
           >
-            Eastwood Academy
+            Monrovia Central High School
           </motion.h1>
           <motion.p
             initial={{ opacity: 0 }}
@@ -85,7 +94,7 @@ const Login = () => {
             transition={{ delay: 0.4 }}
             className="text-white/80 text-lg"
           >
-            Student Information System
+            Liberian Educational Portal
           </motion.p>
         </div>
 
@@ -105,7 +114,7 @@ const Login = () => {
                   id="email"
                   name="email"
                   type="email"
-                  placeholder="student@eastwood.edu"
+                  placeholder="user@monrovia.edu.lr"
                   value={formData.email}
                   onChange={handleInputChange}
                   required
@@ -151,6 +160,9 @@ const Login = () => {
                   <SelectContent>
                     <SelectItem value="student">Student</SelectItem>
                     <SelectItem value="teacher">Teacher</SelectItem>
+                    <SelectItem value="registrar">Registrar</SelectItem>
+                    <SelectItem value="dean">Dean of Students</SelectItem>
+                    <SelectItem value="vice-principal">Vice Principal</SelectItem>
                     <SelectItem value="admin">Admin</SelectItem>
                   </SelectContent>
                 </Select>
